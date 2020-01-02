@@ -43,8 +43,8 @@ public class EmployeeController {
      * 添加内容
      * @param age
      */
-    @PostMapping(value = "/employeeAdd")
-    public Employee employeeAdd(@RequestParam("size") String name, @RequestParam("age") Integer age) {
+    @PostMapping(value = "/employees")
+    public Employee employeeAdd(@RequestParam("name") String name, @RequestParam("age") Integer age) {
         Employee employee = new Employee();
         employee.setEmployeeAge(age);
         employee.setEmployeeName(name);
