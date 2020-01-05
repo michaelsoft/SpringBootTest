@@ -44,8 +44,9 @@ public class EmployeeController {
      * @param age
      */
     @PostMapping(value = "/employees")
-    public Employee employeeAdd(@RequestParam("name") String name, @RequestParam("age") Integer age) {
+    public Employee employeeAdd(@RequestParam("id") Integer id, @RequestParam("name") String name, @RequestParam("age") Integer age) {
         Employee employee = new Employee();
+        employee.setId(1);
         employee.setEmployeeAge(age);
         employee.setEmployeeName(name);
         return employeeRepository.save(employee);

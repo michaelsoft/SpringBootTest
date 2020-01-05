@@ -3,14 +3,17 @@ package com.michaelsoft.springboottest.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "Employee")
 public class Employee {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "employeeName")
     private String employeeName;
 
+    @Column(name = "employeeAge")
     private Integer employeeAge;
 
     public Integer getId() {
