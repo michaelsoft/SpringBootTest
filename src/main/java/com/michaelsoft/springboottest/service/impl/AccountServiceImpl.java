@@ -52,8 +52,8 @@ public class AccountServiceImpl implements AccountService {
         fromAccount.setBalance(fromAccount.getBalance() - amount);
         toAccount.setBalance(toAccount.getBalance() + amount);
         accountRepository.save(fromAccount);
-        if (to == 2)
-            throw new Exception();
+       //if (to == 2)
+            //throw new Exception();
         accountRepository.save(toAccount);
     }
 
