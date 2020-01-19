@@ -19,6 +19,7 @@ public class AccountController {
 
     @PostMapping(value = "/accounts")
     public int accountAdd(@RequestParam("balance") Integer balance) {
+        logger.info("Start to create account " );
         Account account = new Account();
         account.setBalance(balance);
         accountService.createAccount(account);

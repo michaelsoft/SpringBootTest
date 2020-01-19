@@ -10,6 +10,10 @@
       hibernate:
         ddl-auto: create
         show-sql: true
+  logging:
+    file: c:/temp/log.txt
+    level:
+      root: info
   girl:
     size: "xxl"
     age: 20

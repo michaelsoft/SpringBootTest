@@ -5,9 +5,14 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public String sayHello(){
+        return "Hello World";
+    }
+
     @RequestMapping(value = "/hello/{name}",method = RequestMethod.GET)
     public String say(@PathVariable("name") String name){
-        return "Hello: " + name;
+        return "Hello " + name;
     }
 
     @Autowired
